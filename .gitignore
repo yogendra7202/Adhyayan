@@ -1,5 +1,6 @@
 HELP.md
 target/
+application-local.properties
 
 # IntelliJ IDEA
 .idea

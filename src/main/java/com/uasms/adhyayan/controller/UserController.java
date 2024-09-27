@@ -6,9 +6,14 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class UserController {
 
-    @GetMapping("/users")
-    public ResponseEntity<String> getUser(){
+    @GetMapping("/users/{userId}")
+    public ResponseEntity<String> getUser(@PathVariable int id){
         return ResponseEntity.ok().body("User Fetched!!");
+    }
+
+    @GetMapping("/users")
+    public ResponseEntity<String> getAllUsers(){
+        return ResponseEntity.ok().body("Users Fetched!!");
     }
 
     @PostMapping("/users")
